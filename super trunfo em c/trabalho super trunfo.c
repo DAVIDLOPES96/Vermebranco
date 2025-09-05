@@ -1,43 +1,43 @@
 #include <stdio.h>
 
-int main () {
-    char estado [50];
-    char cidade[50];
-    int  população;
-    char código [01];
-    float area_km;
-    float pib;
-    int pontos_turisticos;
+int main() {
+    char estado[50];  // Aumentei o tamanho para evitar overflow
+    char cidade[50];  // Aumentei o tamanho para evitar overflow
+    int populacao;   // População deve ser um número inteiro
+    char codigo[10];  // Aumentei o tamanho para evitar overflow
+    float area_km;   // Área pode ser um número decimal
+    float pib;    // PIB pode ser um número decimal
+    int pontos_turisticos; // Pontos turísticos deve ser um número inteiro
+    // Solicitar e ler os dados do usuário
+    printf("Qual nome do seu estado?:"); // saida de dados
+    scanf("%49s",estado); // entrada de dados
 
-    printf ("qual nome do seu estado? :");
-    scanf ("%49s \n", &estado);
+    printf("Qual nome da sua cidade?:"); // saida de dados
+    scanf("%49s",cidade); // entrada de dados
 
-   printf ("qual nome de sua cidade? :");
-   scanf ("%49s \n", &cidade);
+    printf("Qual sua população?:"); // saida de dados
+    scanf("%d",&populacao); // entrada de dados
 
-   printf ("qual sua população? :");
-   scanf ("%d \n", &população);
+    printf("Qual seu código?:"); // saida de dados
+    scanf("%9s",codigo); // entrada de dados
 
-   printf ("qual seu codigo? :");
-   scanf ("%49s \n", &código);
+    printf("Qual é a área em km²?:"); // saida de dados
+    scanf("%f",&area_km); // entrada de dados
 
-   printf ("qual é sua em km? :");
-   scanf ("%f \n", &area_km);
+    printf("Quanto vale seu PIB?:"); // saida de dados
+    scanf("%f",&pib); // entrada de dados
 
-   printf ("quanto vale seu pib? :");
-   scanf("%d \n", &pib);
+    printf("Quantos pontos turísticos tem em sua cidade?:"); // saida de dados
+    scanf("%d",&pontos_turisticos); // entrada de dados
 
-   printf ("quantos ponturiscos tem em sua cidade? :");
-   scanf ("%.2f \n", &pontos_turisticos);
+    printf("\n------ Dados Cadastrados --------\n"); 
+    printf("Estado: %s\n",estado); 
+    printf("Cidade: %s\n",cidade);
+    printf("População: %d\n",populacao);
+    printf("Código: %s\n",codigo);
+    printf("Área em km²: %.2f\n",area_km);
+    printf("PIB: %.2f\n", pib);
+    printf("Pontos turísticos: %d\n",pontos_turisticos);
 
-   printf ("\n------dados cadastrados--------\n");
-   printf ("estados: %s\n", estado);
-   printf ("cidade: %s\n", cidade);
-   printf ("população: %d\n", população);
-   printf ("código: %s\n", código);
-   printf ("Área em km: %.2f\n",area_km);]
-   printf ("PIB: %.2f\n", pib);
-   printf ("pontos_turisticos: %d\n");
-
-   return 0;
+    return 0;
 }
