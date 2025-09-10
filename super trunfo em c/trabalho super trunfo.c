@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    
     //ciadade 1
     char estado1[50], cidade1[50],codigo1[10];  // Aumentei o tamanho para evitar overflow
     int populacao1;   // População deve ser um número inteiro
@@ -8,37 +9,41 @@ int main() {
     float pib1;    // PIB pode ser um número decimal
     int pontos_turisticos1; // Pontos turísticos deve ser um número inteiro
     //cidade 2
-    char estado2[50], cidade2[50],codigo2[10]; 
-    int populacao2;
-    float area_km2;
-    float pib2;
-    int pontos_turisticos2;
+    char estado2[50], cidade2[50],codigo2[10]; // Aumentei o tamanho para evitar overflow
+    int populacao2;  // População deve ser um número inteiro
+    float area_km2;  // Área pode ser um número decimal
+    float pib2;  // PIB pode ser um número decimal
+    int pontos_turisticos2; // Pontos turísticos deve ser um número inteiro
     //cadastro cidade 1
 
     printf("----- Cadastro da primeira cidade -----\n");
-    printf("estado:"); // saida de dados
+     
+    printf("Qual nome da seu estado?:"); // saida de dados
     scanf("%49s",estado1); // entrada de dados
 
-    printf("cidade:"); // saida de dados
+    
+    printf("qual sua cidade?:"); // saida de dados
     scanf("%49s",cidade1); // entrada de dados
 
-    printf("populacção:"); // saida de dados
+    printf("Qual sua população?:"); // saida de dados
     scanf("%d",&populacao1); // entrada de dados
 
-    printf("código:"); // saida de dados
+    printf("Qual seu código?:"); // saida de dados
     scanf("%9s",codigo1); // entrada de dados
 
-    printf(" Area km²:"); // saida de dados
+    printf("Qual é a área em km²?:"); // saida de dados
     scanf("%f",&area_km²1); // entrada de dados
-
-    printf("PIB:"); // saida de dados
+    
+    printf("Quanto vale seu PIB?:"); // saida de dados
     scanf("%f",&pib1); // entrada de dados
-
-    printf("pontos turísticos:"); // saida de dados
+   
+    printf("Quantos pontos turísticos tem em sua cidade?:"); // saida de dados
     scanf("%d",&pontos_turisticos1); // entrada de dados
+    
+   //cadastro cidade 2
 
-    //cadastro cidade 2
     printf("----- Cadastro da segunda cidade -----\n");
+    
     printf("estado:"); // saida de dados
     scanf("%49s",estado2); // entrada de dados
 
@@ -83,6 +88,7 @@ int main() {
     }
 
     printf("\n------ Dados Cadastrados --------\n"); 
+    printf("Estado: %s\n",estado); 
     printf("Estado: %s\n",estado1); 
     printf("Cidade: %s\n",cidade1);
     printf("População: %d\n",populacao1);
